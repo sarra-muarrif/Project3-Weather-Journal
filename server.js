@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = [];
+projectData = {};
 
 // Require Express to run server and routes
 const express = require('express');
@@ -34,7 +34,7 @@ function addData(req, res) {
         date: req.body.date,
         user_response: req.body.user_response
     }
-    projectData.push(newEntry)
+    projectData = (newEntry)
     res.send(projectData)
     console.log(projectData, "project Data")
 }
